@@ -1,0 +1,378 @@
+/* 
+    NOTE: This CSS stylesheet is intended to overwrite Bootstrap 5
+*/
+
+/* 0) Global Normalise */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* 1) Colors */
+:root {
+    --offwhite: #f8f8f8;
+    --verylightgrey: #dfdfdf;
+    --nicegreen: #17a740;
+}
+
+/* 2) Typography */
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300&family=Maitree&family=Roboto&display=swap');
+
+h1, h2 {
+    font-family: 'Catamaran', sans-serif;
+}
+
+h3, h4, h5, h6 {
+    font-family: 'Maitree', serif;
+}
+
+p, a {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 3) Navbar */
+.navbar {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+.navbar-brand {
+    border: none;
+    background-color: rgba(0,0,0,0);
+    box-shadow: gray;
+}
+
+#navbar-brand:focus {
+    border: none;
+    box-shadow: none;
+}
+
+#navbar-icon {
+    width: 50px;
+    height: 50px;
+    margin-left: 1em;
+    margin-right: 1rem;
+}
+
+nav {
+    height: 70px;
+    z-index: 5050;
+    box-shadow: rgba(201, 201, 201, 0.5);
+}
+
+.nav-item:hover {
+    background-color: rgb(202, 202, 202);
+    color: rgb(255, 255, 255);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 15px;
+    border-radius: 20px;
+}
+
+main {
+    margin-top: 85px;
+}
+
+/* 3a) Animated Navbar Icon */
+.navbar-toggler-icon {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.navbar-toggler-icon span{
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+}
+
+.navbar-toggler-icon span:nth-child(1) {
+    top: 0px;
+    }
+    
+.navbar-toggler-icon span:nth-child(2), .navbar-toggler-icon span:nth-child(3) {
+    top: 10px;
+}
+
+.navbar-toggler-icon:nth-child(4) {
+    top: 20px;
+}
+
+/* 3b) Form */
+/* .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom: 4px solid #ffae00;
+    min-width: 110px;
+    box-shadow: 0px 2px 20px 0px rgba(31, 69, 163, 0.5);
+    padding: 3px;
+  } */
+
+#drop-down-toggle {
+    cursor: pointer;
+}
+
+#my-dropdown {
+    position: relative;
+    display: none;
+    top: -20px;
+    right: 20px;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 20px 0px rgba(31, 69, 163, 0.5);
+}
+
+#new-post-form input[type="text"],
+#new-post-form textarea,
+#new-post-form button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+  
+  #new-post-form h4 {
+    position: relative;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    padding-top: 10px;
+  }
+
+  fieldset {
+    border: 1px;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+  }
+  
+  #new-post-form input[type="text"],
+  #new-post-form textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+  }
+  
+  #new-post-form input[type="text"]:hover,
+  #new-post-form textarea:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #aaa;
+  }
+  
+  #new-post-form textarea {
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+  }
+  
+  #new-post-form button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #fc7a3e;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+  }
+  
+  #new-post-form button[type="submit"]:hover {
+    background: #0039f5;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  #new-post-form button[type="submit"]:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  #new-post-form input:focus,
+  #new-post-form textarea:focus {
+    outline: 0;
+    border: 1px solid #aaa;
+  }
+  
+  ::-webkit-input-placeholder {
+    color: #888;
+  }
+  
+  :-moz-placeholder {
+    color: #888;
+  }
+  
+  ::-moz-placeholder {
+    color: #888;
+  }
+  
+  :-ms-input-placeholder {
+    color: #888;
+  }
+  
+  /* box to show gif results */
+  .gifBox {
+    border: none;
+    padding: 5px;
+    font: 24px/36px sans-serif;
+    width: 400px;
+    height: 700px;
+    overflow: scroll;
+    overflow-x: hidden;
+    border: solid;
+    border-color: black;
+  }
+  
+  /* scroll bar for box adapted from https://www.quackit.com/html/codes/html_scroll_box.cfm */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  
+  ::-webkit-scrollbar-track {
+    border: 1px solid rgb(50, 151, 205);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(50, 55, 205);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #15076c;
+  }
+  
+/* 5a) Comment Systems */
+#comment-container {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    width: 100%;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+#comment-container.box div {
+    display: inline-block;
+    justify-content: space-between;
+}
+
+#comment-container.comment-box {
+    width: 100%;
+}
+
+#comment-container.comments div {
+    color: rgb(0, 0, 0);
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px 20px;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: none;
+    width: 100%;
+}
+
+#comment-container.comments div span {
+    font-size: 15px;
+} 
+
+#comment-container.comments div i  {
+    font-size: 20px;
+    color: #202020;
+    right: 25px;
+    padding-right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: all .5s;
+}
+
+#comment-container.comments div i:hover {
+    color: #ff8800;
+    transform: translateY(-50%) scale(1.3);
+}
+
+#comment-container.box input {
+    width: 100%;
+    border: none;
+    padding: 5px;
+    border-radius:2%
+}
+
+#comment-container.box button {
+    width: 30%;
+    background: none;
+    border: 1px solid #fff;
+    cursor: pointer;
+    color: #fff;
+    transition: all .5s;
+}
+
+#comment-container.box button:hover {
+    background: #3f4c6b;
+    border: 1px solid #3f4c6b;
+}
+
+.box i {
+    cursor: pointer;
+    transition: all .5s;
+    font-size: 23px;
+}
+
+.like:active {
+    color: #5691c8;
+    display: flex-start;
+    transform: scale(1.2);
+}
+
+.love:active {
+    color: #c31432;
+    transform: scale(1.2);
+}
+
+
+/* 6) Media Queries */
+/* small vertical margin between cards on larger screens */
+@media screen and (min-width: 574px) {
+    .card {
+        margin: 15px;
+        margin-right: 15px;
+    }
+}
+
+/* remove margin at BS column breakpoint */
+@media screen and (max-width: 574px) {
+    .card {
+        margin: 10px;
+    }
+}
+
+/* @media screen and (max-width: 519px) {
+    #upload-col {
+        margin-left: 30px;
+    }
+} */
+
+.image-footer {
+    height: 50px;
+    width: 50px;
+    display: flex;
+}
